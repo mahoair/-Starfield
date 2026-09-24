@@ -11,8 +11,6 @@ Derleme adımı yok. `index.html` dosyasını tarayıcıda açın ya da klasör�
 npx http-server .
 ```
 
-`master` dalına yapılan her push, GitHub Actions üzerinden Azure Static Web Apps'e otomatik olarak yayınlanır.
-
 ## Kontroller
 
 | Kontrol | İşlev |
