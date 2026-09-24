@@ -1,18 +1,77 @@
 <!DOCTYPE html>
-<html>
+<html lang="tr">
   <head>
     <meta charset="UTF-8">
-    <title>StarField_p5.js</title>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="p5.js ile yapılmış etkileşimli yıldız alanı (starfield) animasyonu.">
+    <title>Starfield</title>
 
-    
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/addons/p5.sound.min.js"></script>
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden;
+        background: #000;
+      }
+      canvas {
+        display: block;
+        touch-action: none;
+      }
+      #hud {
+        position: fixed;
+        left: 16px;
+        bottom: 16px;
+        max-width: calc(100vw - 32px);
+        padding: 10px 14px;
+        border-radius: 10px;
+        background: rgba(10, 14, 30, 0.55);
+        backdrop-filter: blur(4px);
+        color: rgba(220, 230, 255, 0.85);
+        font: 13px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif;
+        pointer-events: none;
+        user-select: none;
+        transition: opacity 0.6s ease;
+      }
+      #hud.hidden {
+        opacity: 0;
+      }
+      #speed {
+        font-weight: 600;
+        font-variant-numeric: tabular-nums;
+      }
+      kbd {
+        display: inline-block;
+        min-width: 1.2em;
+        padding: 0 4px;
+        border: 1px solid rgba(220, 230, 255, 0.35);
+        border-radius: 4px;
+        font: inherit;
+        font-size: 12px;
+        text-align: center;
+      }
+      @media (hover: none) {
+        .keys { display: none; }
+      }
+    </style>
 
-    <script type="text/javascript" src="sketch.js"></script>
-    <script type="text/javascript" src="Star.js"></script>
-
-    <style> body {padding: 0; margin: 0;} canvas {vertical-align: top;} </style>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.13/lib/p5.min.js"></script>
+    <script src="Star.js"></script>
+    <script src="sketch.js"></script>
   </head>
   <body>
+    <div id="hud">
+      <div id="speed"></div>
+      <div>Fareyi / parmağını sağa kaydır: hızlan</div>
+      <div class="keys">
+        <kbd>↑</kbd><kbd>↓</kbd> hız ·
+        <kbd>W</kbd> warp ·
+        <kbd>Boşluk</kbd> duraklat ·
+        <kbd>C</kbd> renk ·
+        <kbd>F</kbd> tam ekran ·
+        <kbd>H</kbd> yardım
+      </div>
+    </div>
   </body>
 </html>
