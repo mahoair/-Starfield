@@ -1,5 +1,7 @@
 # Starfield
 
+**Canlı demo:** https://mahoair.github.io/-Starfield/
+
 p5.js ile yazılmış, tarayıcıda çalışan etkileşimli bir yıldız alanı animasyonu.
 Yıldızlar size doğru uçar; hızlandıkça izleri uzar ve en yüksek hızda "hiper uzay" mavisine döner.
 
@@ -10,6 +12,8 @@ Derleme adımı yok. `index.html` dosyasını tarayıcıda açın ya da klasör�
 ```sh
 npx http-server .
 ```
+
+`master` dalına yapılan her push, GitHub Pages üzerinden otomatik olarak yayınlanır.
 
 ## Kontroller
 
